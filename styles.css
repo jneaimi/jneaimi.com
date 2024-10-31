@@ -32,6 +32,7 @@ nav {
   z-index: 1000;
   transition: all 0.3s ease;
   background: transparent;
+  top: 0;
 }
 
 nav.scrolled {
@@ -76,15 +77,15 @@ nav.scrolled .nav-links a:hover {
 }
 
 main {
-  padding-top: 4rem;
+  padding-top: 0;
 }
 
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem 4rem;
+  padding: 0 4rem;
   max-width: 100%;
   margin: 0;
   position: relative;
@@ -223,7 +224,7 @@ main {
   }
 
   .hero {
-    padding: 4rem 2rem;
+    padding: 0 2rem;
   }
 
   .hero h1 {
@@ -371,4 +372,5 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
+  padding-top: 80px;
 }

@@ -47,11 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add nav background on scroll
   const nav = document.querySelector("nav");
-  window.addEventListener("scroll", () => {
+
+  // Function to update nav based on scroll position
+  const updateNav = () => {
     if (window.scrollY > 50) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
     }
-  });
+  };
+
+  // Check scroll position immediately after page load
+  updateNav();
+
+  // Update on scroll
+  window.addEventListener("scroll", updateNav);
 });

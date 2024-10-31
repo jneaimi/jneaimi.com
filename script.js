@@ -29,4 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
     section.style.transition = "all 0.6s ease-out";
     observer.observe(section);
   });
+
+  // Show more experience functionality
+  const showMoreBtn = document.querySelector(".show-more-btn");
+  const hiddenExperience = document.querySelector(".hidden-experience");
+
+  if (showMoreBtn && hiddenExperience) {
+    showMoreBtn.addEventListener("click", () => {
+      hiddenExperience.style.display =
+        hiddenExperience.style.display === "none" ? "block" : "none";
+      showMoreBtn.textContent =
+        hiddenExperience.style.display === "none"
+          ? "Show More Experience"
+          : "Show Less";
+    });
+  }
 });

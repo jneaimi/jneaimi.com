@@ -143,3 +143,111 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* Add these new styles after your existing CSS */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: var(--accent-color);
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 2rem 0;
+  position: relative;
+  margin-left: 70px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -85px;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.timeline-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.timeline-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-content li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-content li::before {
+  content: "•";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+.hidden-experience {
+  display: none;
+}
+
+.show-more-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.show-more-btn:hover {
+  background-color: #0052a3;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item {
+    margin-left: 45px;
+  }
+
+  .timeline-date {
+    left: -60px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+}

@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,35 +7,70 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f0f0f0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  background-color: #fafafa;
   color: #333;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  background-color: #007bff;
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #003366;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-button:hover {
-  background-color: #0056b3;
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.hero a {
+  color: #ffdd57;
+  text-decoration: none;
+}
+
+.section {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+}
+
+.section ul,
+.section p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.section ul li {
+  margin-bottom: 8px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

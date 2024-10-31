@@ -1,7 +1,18 @@
+// Fade-in scroll effect
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("clickMe");
+  const sections = document.querySelectorAll(".fade-in");
 
-  button.addEventListener("click", () => {
-    alert("Hello! You clicked the button!");
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
 });

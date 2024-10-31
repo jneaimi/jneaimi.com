@@ -27,17 +27,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem;
-  background: transparent;
-  box-shadow: none;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  background: transparent;
 }
 
 nav.scrolled {
   background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -65,6 +65,14 @@ nav.scrolled .logo {
 
 nav.scrolled .nav-links a {
   color: var(--text-color);
+}
+
+nav.scrolled .nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
 }
 
 main {

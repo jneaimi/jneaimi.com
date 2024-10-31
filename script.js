@@ -45,12 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add nav background on scroll
+  // Improved nav scroll behavior
   const nav = document.querySelector("nav");
+  const hero = document.querySelector(".hero");
 
-  // Function to update nav based on scroll position
   const updateNav = () => {
-    if (window.scrollY > 50) {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const scrolled = heroBottom <= nav.offsetHeight;
+
+    if (scrolled) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
@@ -60,6 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check scroll position immediately after page load
   updateNav();
 
-  // Update on scroll
-  window.addEventListener("scroll", updateNav);
+  // Update on scroll with throttling for better performance
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
 });

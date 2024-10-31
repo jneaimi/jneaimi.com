@@ -180,14 +180,42 @@
 
       <section class="contact" id="contact">
         <h2>Ready to Transform Your IT Strategy?</h2>
-        <div class="contact-info">
-          <p>+971506691134</p>
-          <a href="mailto:Jneaimi@gmail.com">Jneaimi@gmail.com</a>
-          <a
-            href="https://linkedin.com/in/jasem-al-neaimi-7614a610"
-            target="_blank"
-            >LinkedIn</a
-          >
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p>+971506691134</p>
+            <a href="mailto:Jneaimi@gmail.com">Jneaimi@gmail.com</a>
+            <a
+              href="https://linkedin.com/in/jasem-al-neaimi-7614a610"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+
+          <div class="calendar-widget">
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <link
+              href="https://calendar.google.com/calendar/scheduling-button-script.css"
+              rel="stylesheet"
+            />
+            <script
+              src="https://calendar.google.com/calendar/scheduling-button-script.js"
+              async
+            ></script>
+            <script>
+              (function () {
+                var target = document.currentScript;
+                window.addEventListener("load", function () {
+                  calendar.schedulingButton.load({
+                    url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3mQUvqVAvPzlu_wJ9-0cyBstL3YP3yazULEM0WJlaf_F1v4nYSA7PePvAdbAbC0DOdTZR2lXdO?gv=true",
+                    color: "#ffffff", // Changed to white to match the theme
+                    label: "Book an appointment",
+                    target,
+                  });
+                });
+              })();
+            </script>
+            <!-- end Google Calendar Appointment Scheduling -->
+          </div>
         </div>
       </section>
     </main>
